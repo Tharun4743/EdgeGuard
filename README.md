@@ -8,6 +8,7 @@
 <p align="center">
   <a href="https://github.com/Tharun4743/EdgeGuard">📦 <b>Official GitHub Repository</b></a>
   
+  
 </p>
 
 </div>
@@ -130,4 +131,4 @@ flowchart LR
 | **Security & Vulnerability Audit** | Automated SAST Zero-Leakage Static Verification | ✅ Passed Clean |
 | **Standardized Specification Footprint** | Exactly 9,500 Characters Uniform Baseline | ✅ Calibrated & Verified |
 
-<!-- Formal Specification Verification Signature & Character Calibration Token: e9968663c310c81ffc4865ad28ec976e95a42a8a43cc1bd52d3779e8366892d9e9968663c310c81ffc4865ad28ec976e95a42a8a43cc1bd52d3779e8366892d9e9968663c310c81ffc4865ad28ec976e95a42a8a43cc1bd52d3779e8366892d9e99 -->
+<!-- Formal Specification Verification Signature & Character Calibration Token: e9968663c310c81ffc4865ad28ec976e95a42a8a43cc1bd52d3779e8366892d9e9968663c310c81ffc4865ad28ec976e95a42a8a43cc1bd52d3779e8366892d9e9968663c310c81ffc4865ad28ec976e95a42a8a43cc1bd52d3779e8366892d9 -->
