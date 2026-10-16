@@ -30,6 +30,19 @@ EdgeGuard is an edge-native automotive intrusion detection system (IDS) that mon
 ---
 
 ## 4. ⚙️ Technical Approach & System Architecture
+
+### 📐 High-Level Architectural Flowchart:
+```mermaid
+graph TD
+    VehicleCAN["Automotive CAN Bus Telemetry (OBD-II / J1939)"] -->|Raw Frame Stream| Ingestion["CAN Frame Ingestion & Normalizer"]
+    Ingestion --> Filter["Payload Bitmask & ID Anomaly Filter"]
+    Filter --> Model["Quantized Edge-AI Anomaly Classifier (ONNX / TFLite)"]
+    Model --> Evaluator{"Zero-Day Intrusion Detected?"}
+    Evaluator -->|Yes| AlertEngine["NSOC Incident Dispatcher & Alert Bus"]
+    Evaluator -->|No| SafeLog[("Encrypted Local Ring Buffer Log")]
+    AlertEngine --> NSOC["Central Automotive Security Operations Dashboard"]
+```
+
 | Automotive Subsystem | Technology | Security Function |
 | :--- | :--- | :--- |
 | **Bus Sniffer** | Python `can` library, SocketCAN | Intercepts CAN 2.0B arbitration IDs and 8-byte message payloads |
