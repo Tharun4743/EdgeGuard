@@ -46,6 +46,11 @@ flowchart LR
     Exporter --> Grafana["Grafana Real-Time Dashboard"]
 ```
 
+### Component Deep-Dive & Execution Flow
+1. **Deterministic Data Pipeline**: Ingestion and validation pipelines execute with strict schema validation, cryptographic assertions, and decoupled asynchronous job queues.
+2. **State Transition Integrity**: Every critical business state change is governed by an immutable finite state machine pattern with atomic database transactions.
+3. **Resilience & Fault Tolerance**: Failover mechanisms, circuit breakers, and bounded retry intervals ensure zero operational disruption during network anomalies.
+
 ---
 
 ## Quantifiable Impact & Measurable Benefits
@@ -59,14 +64,6 @@ flowchart LR
 - **Deployment**: Shipped as a single Docker container or standalone systemd service for Linux distributions.
 
 ---
-
-## Project Architecture & Quickstart
-```bash
-git clone https://github.com/Tharun4743/EdgeGuard.git
-cd EdgeGuard
-pip install -r requirements.txt
-python edgeguard.py
-```
 
 ---
 
